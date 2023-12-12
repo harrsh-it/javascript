@@ -10,7 +10,7 @@
 
 const jsUser = {
     name: "Harshit",
-    "Full name": "Harshit Sisodia"
+    "Full name": "Harshit Sisodia",
     age : 18,
     location : "Jaipur",
     email : "abc@gmail.com",

@@ -12,10 +12,10 @@ let isLoggedIn = false  //bool
 
 
 //     ***Preemetive data types***
-// number    => 2 to power53
-// bigint    => for large number
-// string    => " "
-// boolean   => true/false
+// Number    => 2 to power53
+// Bigint    => for large number
+// String    => " "
+// Boolean   => true/false
 // null      => standalone value
 // Undefined => not defined yet
 // Symbol    => for uniqueness

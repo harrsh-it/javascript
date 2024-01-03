@@ -1,0 +1,13 @@
+  !  Javascript(default) is sychroneous and single threaded
+
+  ! execution Context -- executionone line of code at a time
+                      -- each operation waits for the last one to complete before executing
+
+
+  ! Blocking Code VS Non-Blocking Code 
+    => Blocking code - Block the flow of program
+                     - Read File sychroneous
+    
+    => Non-Blocking Code - Does not block execution
+                         - Read file Async
+

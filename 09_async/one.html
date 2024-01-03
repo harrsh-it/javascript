@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+
+    setTimeout(function(){
+        console.log("HI1");
+    },2000)
+
+
+    const sayHI = function(){
+        console.log("HI2");
+    }
+    setTimeout(sayHI,4000)
+
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML 
+        = "BEST JAVASCRIPT SCRIPT"
+    }
+    const stopTime = setTimeout(changeText,3000)
+
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(stopTime)
+        console.log("Text STOPPED");
+    })
+
+
+    
+
+
+     
+
+
+</script>
+</html>

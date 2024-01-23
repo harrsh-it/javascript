@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body style="background-color: black">
+    <button id="orange">ORANGE</button>
+    <button id="green">Green</button>
+  </body>
+  <script>
+    function init() {
+      let name = "Morzilla ";
+      function displayName() {
+        console.log(name); // it will work(lexical scooping)
+      }
+      displayName();
+    }
+    init();
+
+    function makeFunc() {
+      const name = "Morzilla";
+      function displayName() {
+        console.log(name);
+      }
+      return displayName;
+    }
+
+    const func = makeFunc();
+    myfunc();
+  </script>
+
+  <script>
+    // document.getElementById("orange").onclick = function () {
+    //   document.body.style.backgroundColor = "Orange";
+    // };
+
+    // document.getElementById("green").onclick = function () {
+    //   document.body.style.backgroundColor = "green";
+    // };
+
+    // function clickHandler(color){
+    //     document.body.style.backgroundColor = `${color}`;
+    // }
+
+    // document.getElementById('orange').onclick = clickHandler("Orange")                              //galat hogiya bhai
+    // document.getElementById('green').onclick = clickHandler("green")
+
+    //SOLUTION
+
+    function clickHandler(color) {
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    }
+
+    document.getElementById("orange").onclick = clickHandler("Orange");
+
+    document.getElementById("green").onclick = clickHandler("green");
+  </script>
+</html>
